@@ -26,6 +26,9 @@ Vagrant.configure("2") do |config|
 
   # Set share folder permissions to 777 so that apache can write files
   config.vm.synced_folder ".", "/vagrant", mount_options: ['dmode=777','fmode=666']
+  config.vm.synced_folder "/Users/curtis/Documents/code/stagestream", "/vagrant/public/stagestream.dev", 
+  mount_options: ['dmode=777','fmode=666']
+  config.vm.synced_folder "/Users/curtis/Downloads/CodeIgniter-2.2-stable", "/vagrant/public/codeigniter.dev", mount_options: ['dmode=777','fmode=666']
 
   # Provider-specific configuration so you can fine-tune VirtualBox for Vagrant.
   # These expose provider-specific options.
